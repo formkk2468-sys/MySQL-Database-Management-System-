@@ -11,6 +11,8 @@
 * **การขายสินค้า:** บันทึกรายการสั่งซื้อ จำนวน และส่วนลด
 * **การเคลมสินค้า:** ติดตามสถานะและสาเหตุการเคลมสินค้าที่มีปัญหา
 
+### 📊 ER Diagram
+![Samsung ER Diagram](images/er-diagram.png)
 ---
 
 ## 2. โครงสร้างฐานข้อมูล (Database Schema)
@@ -116,3 +118,11 @@ CREATE TABLE claim (
     Emp_Num VARCHAR(4), 
     Exchange_Type CHAR(20)
 );
+
+## 4. การนำเข้าข้อมูล (Import Data)
+
+LOAD DATA LOCAL INFILE 'customer.txt' INTO TABLE customer;
+LOAD DATA LOCAL INFILE 'employee.txt' INTO TABLE employee;
+LOAD DATA LOCAL INFILE 'prod.txt' INTO TABLE product;
+LOAD DATA LOCAL INFILE 'purchase.txt' INTO TABLE purchase;
+LOAD DATA LOCAL INFILE 'claim.txt' INTO TABLE claim;
