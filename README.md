@@ -127,4 +127,11 @@ LOAD DATA LOCAL INFILE 'prod.txt' INTO TABLE product;
 LOAD DATA LOCAL INFILE 'purchase.txt' INTO TABLE purchase;
 LOAD DATA LOCAL INFILE 'claim.txt' INTO TABLE claim;
 
+```
+
+
+
+
+
+
 ## 4. ตัวอย่างการวิเคราะห์ข้อมูล (Analytical Queries)
