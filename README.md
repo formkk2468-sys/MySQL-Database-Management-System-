@@ -119,10 +119,12 @@ CREATE TABLE claim (
     Exchange_Type CHAR(20)
 );
 
-## 4. การนำเข้าข้อมูล (Import Data)
+-- การนำเข้าข้อมูล (Import Data)
 
 LOAD DATA LOCAL INFILE 'customer.txt' INTO TABLE customer;
 LOAD DATA LOCAL INFILE 'employee.txt' INTO TABLE employee;
 LOAD DATA LOCAL INFILE 'prod.txt' INTO TABLE product;
 LOAD DATA LOCAL INFILE 'purchase.txt' INTO TABLE purchase;
 LOAD DATA LOCAL INFILE 'claim.txt' INTO TABLE claim;
+
+## 4. ตัวอย่างการวิเคราะห์ข้อมูล (Analytical Queries)
