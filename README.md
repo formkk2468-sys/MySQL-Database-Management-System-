@@ -130,8 +130,34 @@ LOAD DATA LOCAL INFILE 'claim.txt' INTO TABLE claim;
 ```
 
 
-
-
-
-
 ## 4. ตัวอย่างการวิเคราะห์ข้อมูล (Analytical Queries)
+
+### กรณีศึกษาที่ 1: ตรวจสอบรายการขายปี 2022 ของพนักงานเฉพาะราย
+#### ใช้สำหรับการประเมินยอดขาย (KPI) ของพนักงานรหัส E002 ในปี 2022
+
+```sql
+SELECT c1.cust_Name, p2.Prod_num, p2.Pur_date, p2.Cust_num, p2.Emp_Num 
+FROM Customer as c1 
+INNER JOIN Purchase as p2 ON p2.cust_num = c1.cust_Num 
+WHERE p2.Pur_Date LIKE '%2022%' AND p2.Emp_num LIKE '%E002%';
+```
+
+### กรณีศึกษาที่ 2: วางแผนสัญญาจ้างพนักงาน (HR Planning)
+#### คำนวณจำนวนวันทำงานที่เหลือตามสัญญา เพื่อเตรียมการจ้างงานหรือต่อสัญญา
+
+```sql
+SELECT el.emp_name, 
+       TIMESTAMPDIFF(DAY, el.Hire_date, contract_expires_date) as workdays 
+FROM employee el 
+ORDER BY el.emp_name ASC;
+```
+
+### กรณีศึกษาที่ 3: สรุปยอดขายสินค้าตามประเภท (Inventory Insights)
+#### เพื่อดูว่าสินค้าชนิดใดมีความต้องการ (Demand) สูงสุด
+
+```sql
+SELECT p1.prod_Name, p1.Prod_Num, COUNT(p2.PUR_Num) as Total_Orders
+FROM Product as p1 
+LEFT JOIN Purchase as p2 ON p1.prod_Num = p2.Prod_Num 
+GROUP BY p1.Prod_Num;
+```
