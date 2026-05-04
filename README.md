@@ -1,9 +1,5 @@
-# MySQL Database Management System 
+# MySQL Database Management System | Samsung Purchase & Claim Management System 
 
-
-# Samsung Purchase & Claim Management System 
-### รายวิชา 01206361 คอมพิวเตอร์ประยุกต์สำหรับวิศวกรอุตสาหการ (KU)
-โปรเจกต์ฐานข้อมูลจำลองเพื่อจัดการระบบการขายและการเคลมสินค้าของบริษัท Samsung โดยใช้ **MySQL**
 
 ---
 
