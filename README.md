@@ -1,4 +1,4 @@
-# MySQL Database Management System | Samsung Purchase & Claim Management System 
+# MySQL DBMS Project | Samsung Purchase & Claim Management System 
 
 
 ---
